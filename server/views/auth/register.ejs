@@ -1,0 +1,83 @@
+
+
+<!DOCTYPE html>
+<html>
+  <%- include ../partials/header.ejs %>   
+  
+  <body class="d-flex flex-column h-1000 mb-5" style="background-color: rgb(18, 18, 19);" >
+    <header>      
+      <%- include ../partials/main_nav.ejs %>
+    </header>
+
+<main class="flex-shrink-0">
+    <div class="container mt-4 mb-2" style="box-shadow: 1px 1px 5px 3px rgb(41 55 74); background-color: rgb(33 32 32);">
+
+       <!-- Message Area -->
+    <% if(messages.length > 0) {%>
+      <div class="alert alert-danger">
+          <%= messages %>
+      </div>
+  <% } %>
+      <div class="row" style="height: 100%;" >
+        <div class="col-md-12 mx-2 my-2">
+          <div class="col-md-12 text-center">
+            <h1 class="h1 text-white"><i class="fas fa-address-book"></i> Login!</h1>
+            <br>
+            <p class="h5 text-white mt-3">Register using your information :</p>
+          </div>
+          <br>
+          <h1 class="text-primary text-center mt-2 mb-4">Enter your details below!</h1> 
+          <!--Form -->
+          <div class="col-md-12">
+          <div class="form-field text-white"> 
+            <form method="POST" autocomplete="off">
+                <fieldset class="form-group">
+                    <label for="username">Username: </label>
+                    <input type="text" class="form-control"
+                    name="username" placeholder="Enter username"
+                    id="username" required autofocus>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label for="password">Password: </label>
+                    <input type="password" class="form-control"
+                    name="password" placeholder="Enter password"
+                    id="password" required>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" class="form-control"
+                    name="email" placeholder="Enter Email Address"
+                    id="email" required>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <label for="displayName">Display Name: </label>
+                    <input type="text" class="form-control"
+                    name="displayName" placeholder="Enter Display Name"
+                    id="displayName" required>
+                </fieldset>
+
+                <fieldset class="form-group text-right">
+                    <input type="submit" class="btn btn-success" value="Register">
+                    <a href="/">
+                        <input type="button" class="btn btn-warning" value="Cancel">
+                    </a>
+                </fieldset>
+
+            </form>
+        </div>
+    </div>
+  </div>
+</div>
+</div>
+</main>
+
+</body>
+<footer class="footer mt-auto py-2 fixed-bottom" style="background-color: rgb(19, 67, 170);">
+<% include ../partials/footer.ejs %>
+<% include ../partials/bottom_nav.ejs %>
+
+</footer>
+</html>

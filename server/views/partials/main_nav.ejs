@@ -1,0 +1,29 @@
+
+
+<button id="crbutton" class="btn btn-primary" type="button">
+    <a href="/surveylist/create"
+   > 
+    <i class="fa fa-edit"></i>Create Your Survey
+    </button></a> 
+
+
+
+<button class="btn_respond" type="button">
+    <a href="/surveylist">
+    <i class="fas fa-edit"></i> Respond to a Survey
+</button> </a>
+
+<ul class="navbar-nav">
+                
+    <% if(typeof displayName == 'string' && displayName) { %>
+      <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+      <li class="nav-item"><a href="/logout" class="nav-link">
+        <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+    <% } else { %>
+      <li class="nav-item"><a class="nav-link" aria-current="page" href="/login"><i class="fas fa-key"></i></i> Login</a></li>
+    <% } %>
+                    
+        </ul>
+
+        
+

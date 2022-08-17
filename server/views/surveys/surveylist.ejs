@@ -1,0 +1,61 @@
+<main class="container">
+    <div class="row">
+        <div class="col-md-offsett-3 col-md-10">
+            <h1><%= title %> </h1>
+            <a href = "/surveylist/create" class="btn btn-primary" role="button">
+                <i class="fas fa-plus-circle"></i>Create a Survey</a>
+            
+            <br>
+            <br>
+
+            <table border="2">
+              <!-- Header Row-->
+                <tr class="trows">
+                    <th class="text-center col-1">Survey Topic</th>
+                    <th class="text-center  col-2">Description</th>
+                    <th class="text-center  col-3">Question-1</th>
+                    <th class="text-center  col-4">Answer-1</th>
+
+                    <th class="text-center  col-5">Question-2</th>
+                    <th class="text-center  col-6">Answer-2</th>
+
+                    <th class="text-center  col-7">Question-3</th>
+                    <th class="text-center  col-8">Answer-3</th>
+
+
+                </tr>
+
+                <!--Repeatable Template Row-->
+                <% for(let count = 0; count < SurveyList.length; count++) { %>
+                
+                    <tr class="d-flex">
+                      <td class="text-center col-1" ><%= SurveyList[count].survey_topic %></td>
+                      <td class="text-center col-2"><%= SurveyList[count].description %></td>
+                      <td class="text-center col-3"><%= SurveyList[count].question1 %></td>
+                      <td class="text-center col-3"><%= SurveyList[count].answer1 %></td>
+                      <td class="text-center col-4"><%= SurveyList[count].question2 %></td>
+                      <td class="text-center col-4"><%= SurveyList[count].answer2 %></td>
+                      <td class="text-center col-5"><%= SurveyList[count].question3 %></td>
+                      <td class="text-center col-5"><%= SurveyList[count].answer3 %></td>
+                      <td class="text-center col-9">
+                        <a href="/surveylist/edit/<%= SurveyList[count]._id %>" class="btn btn-primary btn-sm">
+                          <i class="fas fa-pencil-alt">Edit</i>
+                          </a>
+                        
+                      </td>
+    
+                      <td class="text-center col-10">
+                        <a href="/surveylist/delete/<%= SurveyList[count]._id %>" class="btn btn-danger btn-sm">
+                          <i class="fas fa-trash-alt"></i> Delete</a>
+                       
+                      </td>
+                     
+                    </tr>
+                    <% } %>
+
+
+            </table>
+        </div>
+    </div>
+</main>
+

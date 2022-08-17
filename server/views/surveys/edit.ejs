@@ -1,0 +1,104 @@
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6"></div>
+        <h1><%= title %> </h1>
+
+        <form class="form" method="POST">
+            <div class="form-group">
+                <label for="nameTextField">Survey Topic</label>
+                <input type="text" class="form-control"
+                id="TopicTextField"
+                placeholder="Enter the Contact Name"
+                name="name" 
+                value="<%= survey.survey_topic %>"
+                required>
+            </div>
+
+            <div class="form-group">
+                <label for="auhtorTextField">Description</label>
+                <input type="text" class="form-control"
+                id="DescriptionTextField"
+                placeholder="Enter the survey Description"
+                name="description" 
+                value="<%= survey.description %> "
+                required>
+
+            
+            </div>
+
+            <div class="form-group">
+                <label for="publishedTextField">Question-1</label>
+                <input type="text" class="form-control"
+                id="Question1TextField"
+                placeholder="Enter your first question"
+                name="question1"
+                value="<%= survey.question1 %> "
+                required>
+            </div>
+
+            <div class="form-group">
+                <label for="publishedTextField">Answer-1</label>
+                <input type="text" class="form-control"
+                id="Answere1TextField"
+                placeholder="Enter the answer for this "
+                value="<%= survey.answer1 %> "
+                name="answer1" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="publishedTextField">Question-2</label>
+                <input type="text" class="form-control"
+                id="Question2TextField"
+                placeholder="Enter your second question"
+                value="<%= survey.question2 %> "
+                name="question2" required>
+            </div>
+
+            <div class="form-group">
+                <label for="publishedTextField">Answer-2</label>
+                <input type="text" class="form-control"
+                id="Answer2TextField"
+                placeholder="Enter your answer for this"
+                value="<%= survey.answer2 %> "
+                name="answer2" required>
+            </div>
+
+
+            <div class="form-group">
+                <label for="publishedTextField">Question-3</label>
+                <input type="text" class="form-control"
+                id="Question3TextField"
+                placeholder="Enter your third question"
+                value="<%= survey.question3 %> "
+                name="question3" required>
+            </div>
+
+           
+
+            
+            <div class="form-group">
+                <label for="publishedTextField">Answer-3</label>
+                <input type="text" class="form-control"
+                id="Answer3TextField"
+                placeholder="Enter your answer for this"
+                value="<%= survey.answer3 %> "
+                name="answer3" required>
+            </div>
+
+
+
+            
+
+            <button class="btn btn-primary" type="submit">
+                <i class="fas fa-edit"></i> Edit
+            </button>   
+
+
+            <a href="/survey-list" class="btn btn-warning">
+                <i class="fas fa-undo"></i> Cancel
+            </a>
+            
+            
+           </form>
+    </div>
+</div>
